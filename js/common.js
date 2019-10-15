@@ -9,10 +9,12 @@ main.style.paddingTop = menu.offsetHeight + parseInt(getComputedStyle(main).padd
 window.addEventListener('scroll', function() {
 	if (window.scrollY > 1) {
 		menu.style.transform = `translateY(-${firstLine.offsetHeight}px)`;
+		menu.style.opacity = '.95';
 		secondLine.style.padding = '.6rem 0';
 		secondLine.querySelector('nav').style.display = 'inline-block';
 	} else {
 		menu.style.transform = 'translateY(0)';
+		menu.style.opacity = '1';
 		secondLine.style.padding = '';
 		secondLine.querySelector('nav').style.display = 'none';
 	}
